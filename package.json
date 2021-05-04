@@ -1,0 +1,23 @@
+{
+  "name": "extractor",
+  "version": "1.0.0",
+  "description": "Uses to extract the data from image ",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalaxyInit/Extractor.git"
+  },
+  "author": "GalaxyInit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GalaxyInit/Extractor/issues"
+  },
+  "homepage": "https://github.com/GalaxyInit/Extractor#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
