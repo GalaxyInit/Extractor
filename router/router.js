@@ -4,14 +4,17 @@ const register = require("./register");
 const login = require("./login");
 const homepage = require("./homepage");
 
-router.get("/", homepage);
+router.get("/", (req, res) => {
+  res.send("Login To se Your Name in The Screen");
+});
+router.get("/:name", homepage);
 // Route for Register
 router.post("/api/v1/register", register);
 // Route for Login
 router.post("/api/v1/login", login);
 
 //restricting any other url
-router.all("/*", (req, res) => {
+router.all("*", (req, res) => {
   res.sendStatus(400);
 });
 
