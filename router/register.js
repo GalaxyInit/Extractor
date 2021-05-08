@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 
 router.post("/api/v1/register", async (req, res) => {
   // Validating the input
+  // Required the NAME, EMAIL, PASSWORD
   const { error } = registerValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
