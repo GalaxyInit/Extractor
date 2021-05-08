@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const route = require("./router/router");
+app.use(express.json());
 
 // Redirecting the Traffic to Routers
 app.use("/api/v1", route);
@@ -17,7 +18,6 @@ try {
 } catch (error) {
   console.error(error);
 }
-app.use(express.json());
 
 app.listen(80, () => {
   console.log("Started on http://localhost");
