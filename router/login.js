@@ -24,11 +24,7 @@ router.post("/api/v1/login", async (req, res) => {
   res.header("auth-token", token);
 
   // Logging the user
-  await User.findById(user._id, (err, data) => {
-    var name = data.name;
-    res.redirect("/:" + name);
-  });
-  // res.send("Logged In");
+  res.send("Logged In");
 });
 
 // Exporting the Routes

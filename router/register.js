@@ -3,6 +3,7 @@ const router = express.Router();
 const { registerValidation } = require("./validation");
 const User = require("../model/user");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 router.post("/api/v1/register", async (req, res) => {
   // Validating the input
