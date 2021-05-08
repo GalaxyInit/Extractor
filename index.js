@@ -6,7 +6,7 @@ const route = require("./router/router");
 app.use(express.json());
 
 // Redirecting the Traffic to Routers
-app.use("/api/v1", route);
+app.use("/", route);
 
 //connect to DB
 try {

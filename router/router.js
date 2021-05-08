@@ -1,9 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const register = require("./register");
+const login = require("./login");
+const homepage = require("./homepage");
 
+router.get("/", homepage);
 // Route for Register
-router.post("/register", register);
+router.post("/api/v1/register", register);
+// Route for Login
+router.post("/api/v1/login", login);
 
 //restricting any other url
 router.all("/*", (req, res) => {
