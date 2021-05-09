@@ -5,7 +5,7 @@ const login = require("./login");
 const homepage = require("./homepage");
 
 router.get("/", (req, res) => {
-  res.send("Login To se Your Name in The Screen");
+  res.send("Hi Unknown");
 });
 router.get("/:name", homepage);
 // Route for Register
