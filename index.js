@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const route = require("./router/router");
+const bodyParser = require("body-parser");
 app.use(express.json());
 
 // Redirecting the Traffic to Routers
