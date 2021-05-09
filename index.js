@@ -6,6 +6,8 @@ const route = require("./router/router");
 app.use(express.json());
 
 // Redirecting the Traffic to Routers
+app.use(bodyParser.urlencoded({ extended: true })); // Keep it for Form data to pass
+
 app.use("/", route);
 
 //connect to DB
