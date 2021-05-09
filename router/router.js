@@ -4,10 +4,25 @@ const register = require("./register");
 const login = require("./login");
 const homepage = require("./homepage");
 
+// Diffrent Routes
 router.get("/", (req, res) => {
-  res.send("Hi Unknown");
+  res.render("index");
 });
+
+// Route For Login
+router.get("/login", (req, res) => {
+  res.render("login");
+});
+
+// Router For Register
+router.get("/register", (req, res) => {
+  res.render("register");
+});
+
+// #TODO Need To Check On It In Future
 router.get("/:name", homepage);
+
+// API's
 // Route for Register
 router.post("/api/v1/register", register);
 // Route for Login

@@ -3,7 +3,15 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const route = require("./router/router");
-app.use(express.json());
+var bodyParser = require("body-parser");
+
+// Uses to parse json
+app.use(express.json()); //  Enable it For API
+app.use(bodyParser.urlencoded({ extended: true })); // Keep it for Form data to pass
+
+// Setting the Pug
+app.set("view engine", "pug");
+app.use(express.static("public"));
 
 // Redirecting the Traffic to Routers
 app.use("/", route);
