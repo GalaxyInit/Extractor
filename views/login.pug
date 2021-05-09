@@ -9,6 +9,9 @@ html(lang="en")
     link(rel='stylesheet', href='style.css')
   body
     #main
+    if (data)
+      p Login Please
+    else
      form(action="/api/v1/login" method='post')
        div.label login form
        div.username

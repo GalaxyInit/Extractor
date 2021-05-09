@@ -27,7 +27,7 @@ router.post("/api/v1/register", async (req, res) => {
 
   try {
     const savedUser = await user.save();
-    res.send({ user: user.name, message: "Thanks For Registering" });
+    res.redirect("/login", { data: user.name });
   } catch (err) {
     res.send("Error Is Coming").status(400);
     console.log(err);
